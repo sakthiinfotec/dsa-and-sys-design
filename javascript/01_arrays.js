@@ -31,10 +31,10 @@ function findMax(arr) {
  */
 function findCountOfMaxElementsThanItself(arr) {
   let maxCount = 0, max = findMax(arr);
-	const n = arr.length;
-	for(let i=1; i<n; i++) {
-  	if (arr[i] == max) {
-	      maxCount++;      
+  const n = arr.length;
+  for(let i=1; i<n; i++) {
+    if (arr[i] == max) {
+        maxCount++;      
     }
   }
   return n - maxCount;
