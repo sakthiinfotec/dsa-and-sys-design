@@ -39,7 +39,7 @@ Output 1:
 Output 2:
  1 2 2
  */
-public class RotateKElements {
+public class RightRotateKElements {
   static void reverse(int[] arr, int s, int e) {
     int tmp;
     while (s < e) {
