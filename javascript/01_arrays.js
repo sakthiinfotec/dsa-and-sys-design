@@ -136,3 +136,21 @@ function reverse(arr, s, e) {
 
 reverse(arr, s, e)
 console.log(arr.join(', '));
+
+
+/*
+ * Problem 5: Given array of N elements, rotate array from last to first by k times
+ * Solution: 
+ *  1. Reverse entire array
+ *  2. Reverse first K elements [0, k-1]
+ *  3. Reverse last N-K elements [k, n-1] 
+ * TC: O(N)
+ */
+
+function rotate(arr, k) {
+  const n = arr.length;
+  reverse(arr, 0, n-1)
+  reverse(arr, 0, k-1)
+  reverse(arr, k, n-1)
+}
+
