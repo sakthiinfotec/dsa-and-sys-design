@@ -84,12 +84,12 @@ const arr = [3, -2, 1, 4, 3, 6, 8];
 const k = 10;
 
 function findPairSumK(arr, k) {
-	const n = arr.length;
-	for (let i=0; i<n; i++) {
-			for (j=0; j<i; j++) {
-				if (arr[i] + arr[j] == k)
-					return true;
-			}
+  const n = arr.length;
+  for (let i=0; i<n; i++) {
+    for (j=0; j<i; j++) {
+      if (arr[i] + arr[j] == k)
+        return true;
+    }
 	}
 	return false;
 }
