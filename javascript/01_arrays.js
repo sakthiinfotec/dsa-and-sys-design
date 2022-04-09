@@ -95,3 +95,27 @@ function findPairSumK(arr, k) {
 }
 
 console.assert(findPairSumK(arr, k) == true, 'Pair exists!')
+
+/*
+ * Problem 3: Reverse the given array of N elements
+ * Solution: Use 2 pointer
+ * TC: O(N)
+ */
+const arr = [3, -2, 1, 4, 3, 6, 8];
+const k = 10;
+let i = 0;
+let j = arr.length - 1;
+let tmp;
+while (i < j) {
+  tmp = arr[i];
+  arr[i] = arr[j]
+  arr[j] = tmp;
+  
+  i++;
+  j--;
+}
+
+for (let el of arr) {
+  console.log(el);
+}
+
