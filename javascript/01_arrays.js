@@ -115,7 +115,20 @@ while (i < j) {
   j--;
 }
 
-for (let el of arr) {
-  console.log(el);
+/*
+ * Problem 4: Given array of N elements, reverse between [s, e] elements where s <= e
+ * Solution: Use start and end pointer
+ * TC: O(N)
+ */
+
+const arr = [-3, 4, 2, 8, 7, 9, 6, 2, 10];
+let s = 3, e = 7, tmp;
+while (s < e) {
+    tmp = arr[s];
+    arr[s] = arr[e];
+    arr[e] = tmp;
+    s++;
+    e--;
 }
 
+console.log(arr.join(', '));
