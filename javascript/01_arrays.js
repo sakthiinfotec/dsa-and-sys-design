@@ -102,7 +102,6 @@ console.assert(findPairSumK(arr, k) == true, 'Pair exists!')
  * TC: O(N)
  */
 const arr = [3, -2, 1, 4, 3, 6, 8];
-const k = 10;
 let i = 0;
 let j = arr.length - 1;
 let tmp;
@@ -122,13 +121,18 @@ while (i < j) {
  */
 
 const arr = [-3, 4, 2, 8, 7, 9, 6, 2, 10];
-let s = 3, e = 7, tmp;
-while (s < e) {
-    tmp = arr[s];
-    arr[s] = arr[e];
-    arr[e] = tmp;
-    s++;
-    e--;
+let s = 3, e = 7;
+
+function reverse(arr, s, e) {
+  let tmp;
+  while (s < e) {
+      tmp = arr[s];
+      arr[s] = arr[e];
+      arr[e] = tmp;
+      s++;
+      e--;
+  }
 }
 
+reverse(arr, s, e)
 console.log(arr.join(', '));
