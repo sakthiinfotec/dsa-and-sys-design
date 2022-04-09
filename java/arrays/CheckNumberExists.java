@@ -35,7 +35,7 @@ Example Output
 Output 1: 1 
 Output 2: 0 
 */
-public class Main {
+public class CheckNumberExists {
     
     static int checkIfElementExists(int[] arr, int n, int number) {
         for(int i=0; i<n; i++) {
