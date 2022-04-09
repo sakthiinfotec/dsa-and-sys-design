@@ -20,7 +20,7 @@ Example Output
   Output 1: 2 
   Output 2: -1 
 */
-public class Solution {
+public class SecondLargest {
     public int solve(int[] A) {
       int n = A.length;
       if (n < 2) {
