@@ -4,15 +4,15 @@
 input: [-3, -2, 6, 8, 4, 8, 5]
 
 Observations:
-1. For max elements, nothing greater than that
+1. For max element, nothing greater than that
 2. Find max element
 3. Get count of the same
-4. return N - count
+4. Return N - count
 */
 
 /* 
  * Find max number from array of numbers 
- * Tc: O(N)
+ * TC: O(N)
  */
 function findMax(arr) {
 	const n = arr.length;
@@ -46,16 +46,18 @@ console.assert(result1 == 5, "max=8, count=2; Result 7(N) - 2 = 5");
 
 const arr2 = [2, 3, 10, 7, 3, 2, 10, 8];
 const result2 = findCountOfMaxElementsThanItself(arr2);
-console.assert(result2 == 6, "max=10, count=2; Result 8(N) - 2 = 6")
+console.assert(result2 == 6, "max=10, count=2; Result (N = 8) - 2 = 6")
 
 
 /*
+ * Approach 2: 
  * Given array of N elements, count no. of elements having atleast 1 element greater than itself. 
  * Solution:
  *  1. For max elements, there will be nothing greater than that
  *  2. Find max element
  *  3. Get the count of the same
  *  4. Result: N - count of max
+ *  TC: O(N)
  */
 const arr = [-3, -2, 6, 8,4,8,5];
 let max = arr[0], prevMax = arr[0], maxCount = 1, n = arr.length;
@@ -69,5 +71,27 @@ for (let i=1; i<arr.length; i++) {
   }
 }
 
-console.log(`Number of elements: ${n - maxCount}`)
+console.assert(n - maxCount == 5, "max=8, count=2; Result 7 - 2 = 5")
 
+
+/*
+ * Problem 2: Given array of N elements, check if there exists a pair i, j such that a[i] + a[j] == k && i != j, return type boolean 
+ * Matrix: Iterate lower or upper part of matrix
+ * TC: O(N^2)
+ */
+
+const arr = [3, -2, 1, 4, 3, 6, 8];
+const k = 10;
+
+function findPairSumK(arr, k) {
+	const n = arr.length;
+	for (let i=0; i<n; i++) {
+			for (j=0; j<i; j++) {
+				if (arr[i] + arr[j] == k)
+					return true;
+			}
+	}
+	return false;
+}
+
+console.assert(findPairSumK(arr, k) == true, 'Pair exists!')
