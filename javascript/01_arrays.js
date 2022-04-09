@@ -15,13 +15,13 @@ Observations:
  * TC: O(N)
  */
 function findMax(arr) {
-	const n = arr.length;
-	let max = arr[0];
-	for(let i=1; i<n; i++) {
-  	if (arr[i] > max) {
-  		  max = arr[i];
+  const n = arr.length;
+  let max = arr[0];
+  for(let i=1; i<n; i++) {
+    if (arr[i] > max) {
+        max = arr[i];
     }
-	}
+  }
   return max;
 }
 
@@ -90,8 +90,8 @@ function findPairSumK(arr, k) {
       if (arr[i] + arr[j] == k)
         return true;
     }
-	}
-	return false;
+  }
+  return false;
 }
 
 console.assert(findPairSumK(arr, k) == true, 'Pair exists!')
