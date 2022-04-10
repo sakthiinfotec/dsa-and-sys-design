@@ -50,7 +50,9 @@ public class Solution {
                 result[i][j] = A[j];
             }
             
+            // Modulate when B[i] > n !important, otherwise it will throw ArrayIndexOutOfBoundException
             int rotations = B[i] % n;
+          
             reverse(result[i], 0, n-1);
             reverse(result[i], 0, n - rotations - 1);
             reverse(result[i], n - rotations, n-1);
